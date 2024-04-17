@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Experiment X - Subject/Topic</title>
+	<title>Experiment 2 - Living Impression</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
 	<meta charset="UTF-8" />
@@ -21,41 +21,53 @@
 	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
 
 	<!-- Link to javascript files - DEFER waits until all elements are rendered -->
-    <script type="text/javascript" src="../js/site.js" DEFER></script>
-	<!-- Use me for a JavaScript OOP Project -->
-	<script type="text/javascript" src="./js/project.js" DEFER></script>
-	<!-- Use me for a p5.js project -->
-	<script type="text/javascript" src="./js/sketch.js" DEFER></script>
+    <script type="text/javascript" src="/experiment2/js/script.js" DEFER></script>
+
 </head>
 <body>
 	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
 	<main id="content">
 		<section>
 
-			<h1>Experiment X - Subject/Topic</h1>
+			<h1>Experiment 2 - A Procedurally Generated Living Impression</h1>
 
 			<div class="minor-section">
 				<div id="canvas-container">
 					<!-- canvas will be added here -->
 				</div>
                 <div class="fullscreen-box">
+                    <button id="reimagine">Reimagine</button>
                     <button id="fullscreen">Fullscreen</button>
                 </div>
 			</div>
 
-			<div class="minor-section">
+            <div class="two-column">
+
+                <div class="minor-section">
+					<div class="image-wrapper">
+                        <img src="/experiment2/img/img.webp">
+                    </div>
 				<h2>Description</h2>
-				<p>What are you trying to acomplish with this experiment?</p>
+				<p>This experiment involves creating a dynamic landscape using procedural generation techniques. By generating mountains and a sun that move and change color over time, we're aiming to simulate a natural and visually appealing scene. Additionally, the inclusion of various colors and shapes adds an aesthetic dimension to the experiment.
+
+</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Technical</h2>
-				<p>Describe in detail what you did technically and how it works?</p>
+				<p>The draw() function is continuously called in a loop to update the canvas. It starts by drawing the background gradient using the drawBackground() function, which takes the top and bottom colors as arguments. The time variable is incremented within the draw() function to simulate the passage of time. Next, the sun's position and color are updated using its update() method, and then it's drawn on the canvas with the draw() method. For each mountain range in the array, its update() method is invoked to update its properties based on time, and then it's drawn on the canvas using the draw() method. Additionally, there are helper functions like drawBackground() for creating the gradient background and classes like Sun and MountainRange to represent the sun and mountain objects, respectively. The Sun class manages properties such as base color, position, and speed, while the MountainRange class handles properties such as color, position, and movement to create a dynamic and visually appealing landscape scene.
+
+
+
+
+
+
+</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Reflection</h2>
-				<p>Each person that worked on the code should reflect on the process, the difficulties, and the successes of the experiment.</p>
+				<p>For this assignment, I referenced my code from a p5.js project. I shared it in the google docs. I also use chat gpt. Other than that, i worked on this assignment on my own. </p>
 			</div>
 
 		</section>
