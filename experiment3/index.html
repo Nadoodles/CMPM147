@@ -47,16 +47,53 @@
             <div class="minor-section">
                 <h2>Description</h2>
                 <p>What are you trying to accomplish with this experiment?</p>
+				<p>i tried to randomly create dungeons/rooms that imitate the ones you would find in mineshafts or strongholds from Minecraft. These tunnels would 
+					always be random, including the rooms. You're never sure how the structure would turn out. So everytime you click on reseed, the structure would change.
+				Sometimes the rooms would include a chest, so its all random on whether or not you get one.</p>
+			</div>
+
+			<div class="minor-section">
+				<h2>Process</h2>
+				<p>How did you go about accomplishing your goal?</p>
+				<p>
+					In approaching the task, I first delved into understanding the provided requirements, which outlined the need to add visual 
+					interest to the grid renderer by introducing variations in the appearance of floor or grass tiles and incorporating dynamic effects using shapes. 
+					After reviewing the existing codebase, which included functions for grid generation, tile type checking, and rendering, I began by focusing on the drawGrid 
+					function. Here, I made targeted modifications to facilitate the rendering of floor or grass tiles with varying appearances. Leveraging the random() function 
+					with a probability condition of random() < 0.01, 
+					I ensured that tiles were rendered differently 1% of the time, injecting spontaneity into the visual composition.
+				</p>
+	
             </div>
 
             <div class="minor-section">
                 <h2>Technical</h2>
                 <p>Describe in detail what you did technically and how it works?</p>
+				<p>Generating the Grid:
+					The generateGrid function creates a grid of a specified size (numCols × numRows).
+					It randomly generates non-overlapping rectangles within the grid, representing different structures or areas.
+					One of the rectangles is chosen randomly to place a chest tile ("C").
+					Connecting Rectangles:
+					The function connectPoints connects random points within the rectangles with tunnel tiles ("T"), creating pathways between them.
+					Checking Rectangle Validity:
+					The function isRectangleValid ensures that the generated rectangles do not overlap or come too close to each other.
+					Grid Checking and Contextual Drawing:
+					The functions gridCheck and gridCode check the surrounding tiles of a given position in the grid and generate a code based on neighboring tile types.
+					The function drawContext uses the generated code to determine the appropriate tile to render based on the context of the neighboring tiles.
+					Drawing the Grid:
+					The drawGrid function renders the grid on the canvas.
+					It loops through each cell of the grid and renders the base tile (grass, tunnel, chest, or context) using the placeTile and drawContext functions.
+					It adds dynamic effects by drawing mostly transparent rectangles on top of each tile.
+					The brightness of these rectangles is calculated based on millis() (time) and noise() (perlin noise) functions, creating the illusion of moving shadows or changing lighting effects.
+					The random() function is used to determine whether to add this effect, providing a 5% chance (0.05) for each tile.</p>
             </div>
 
             <div class="minor-section">
                 <h2>Reflection</h2>
                 <p>Each person that worked on the code should reflect on the process, the difficulties, and the successes of the experiment.</p>
+				<p>I worked on this assignment with Brent Chou. I created the random rooms and tunnels, while he worked on the tilesets, rendering, and working on the overworld. Some difficulties that we encountered were understanding the grid. It took us a while to create the rectangle rooms, and even longer to connect them. Also having multiple rooms, especially when they were close to each other, was a challenge. We had to make sure that the rooms were not too close to each other, and that they were not overlapping. The successes were that we were able to create the rooms and tunnels, and connect them. We were also able to add chests to the rooms, so that was a nice touch. It was overall a good feeling to see when everything comes together.
+
+				</p>
             </div>
 
         </section>
