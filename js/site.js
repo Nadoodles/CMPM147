@@ -3,7 +3,7 @@
 // Date:
 
 // make sure document is ready
-$(document).ready(function() {
+(document).ready(function() {
   console.log("Document ready.")
 
   // Constants
