@@ -19,11 +19,11 @@ let worldSeed;
 let characterPosition;
 let characterColor;
 let spheres = [];
-let worldKeyInitialized = false; // New variable to track world key initialization
-
+let steveImage;
 
 
 function p3_preload() {
+  steveImage = loadImage("https://cdn.glitch.global/294d2e48-919d-480f-a1e2-f5c11009c1df/steve.jpeg?v=1714507907035");
 }
 
 function p3_setup() {
@@ -31,15 +31,10 @@ function p3_setup() {
   characterColor = color(255, 182, 193); // Pink color for the character
 }
 
-
 function p3_worldKeyChanged(key) {
-  try {
-    worldSeed = XXH.h32(key, 0);
-    noiseSeed(worldSeed);
-    randomSeed(worldSeed);
-  } catch (error) {
-    console.error("Error in p3_worldKeyChanged:", error);
-  }
+  worldSeed = XXH.h32(key, 0);
+  noiseSeed(worldSeed);
+  randomSeed(worldSeed);
 }
 
 function p3_tileWidth() {

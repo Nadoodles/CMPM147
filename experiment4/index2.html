@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This title is used for tabs and bookmarks -->
+	<title>Experiment 4 - ProcGen/Infinite Worlds, Second World</title>
+
+	<!-- Use UTF character set, a good idea with any webpage -->
+	<meta charset="UTF-8" />
+	<!-- Set viewport so page remains consistently scaled w narrow devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Include CSS file, including a site-wide CSS and for this particular page -->
+	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- Load jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+	<!-- Load p5.js library -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
+
+	<!-- Link to javascript files - DEFER waits until all elements are rendered -->
+    <script type="text/javascript" src="../js/site.js" DEFER></script>
+	<!-- Use me for a JavaScript OOP Project -->
+	<script type="text/javascript" src="./js/project.js" DEFER></script>
+	<!-- Use me for a p5.js project -->
+	<!-- <script type="text/javascript" src="./js/sketch.js" DEFER></script> -->
+
+	<script type="text/javascript" src="./js/xxhash.min.js" DEFER></script>
+	<script type="text/javascript" src="./js/engine2.js" DEFER></script>
+	<script type="text/javascript" src="./js/my_world2.js" DEFER></script>
+</head>
+<body>
+	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
+	<main id="content">
+		<section>
+
+			<h1>Experiment 4 - ProcGen/Infinite Worlds, Second World</h1>
+
+			<div class="minor-section">
+
+
+					  <div id="container"></div>
+					  <div id="waldoCount"></div>
+
+
+				<br>
+				<p>Use browser back button to return to home page</p>
+				<!-- </div> -->
+                <div class="fullscreen-box">
+                    <button id="fullscreen">Fullscreen</button>
+                </div>
+			</div>
+
+			<div class="minor-section">
+				<h2>Description</h2>
+				<p>What are you trying to acomplish with this experiment?
+				</p>
+				<p>We are trying to recreate the screen of a tv when it has no signal. From top to bottom, 
+					the tile moves in random colors, giving the static feel. Of course it's also endless, so 
+					you can move around the world. 
+				</p>
+			</div>
+
+			<div class="minor-section">
+				<br>
+				<h2>Technical</h2>
+				<p>Describe in detail what you did technically and how it works? </p>
+				<p>The p3_worldKeyChanged function initializes the worldSeed variable by hashing the provided key using XXH. 
+					This ensures deterministic terrain generation by setting the noise and random seeds. The tile dimensions, 
+					defined by p3_tileWidth and p3_tileHeight, establish each tile as a 5x5 square. p3_drawTile renders tiles with colors 
+					determined by their position and the world seed, employing a hash-based selection process that creates a pseudo-random 
+					array of colors. Additionally, a TV static effect is simulated in p3_drawTile by applying dynamic translations to each 
+					tile's position, producing visual distortion reminiscent of static interference.
+				</p>
+			</div>
+
+			<div class="minor-section">
+				<br>
+				<h2>Reflection</h2>
+				<p>
+					This project initially started as a space world. Unfortunately, we couldn’t figure out how to create the vision we had hoped for with space. Once we had practice with sinusoidal motion in our other worlds, we could replicate a glitching effect. This prompted the idea to recreate a TV static channel. This idea was easy to replicate once we understood more about our code and how we could innovate on it.
+
+				</p>
+			</div>
+
+			<div class="minor-section">
+				<br />
+				<h2>Statement</h2>
+				<p>For this world, we wanted to create an imitation of TV static. We realized the potential of creating motion through the use of sinusoidal, cosinusoidal, and tangential functions. After experimenting with the tangent function, we found that translating this function resulted in a glitching effect that was perfect for creating our vision of TV static. The six colors are supposed to represent the pixels on a TV and the black border is an imitation of the actual TV screen.
+
+				</p>
+
+			  </div>
+
+		</section>
+		<nav id="links" class="minor-section">
+			<!-- Put link back to homepage here. -->
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+		</nav>
+	</main>
+</body>
+</html>

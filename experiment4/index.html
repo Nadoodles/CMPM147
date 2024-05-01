@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This title is used for tabs and bookmarks -->
+	<title>Experiment 4 - ProcGen/Infinite Worlds, First World</title>
+
+	<!-- Use UTF character set, a good idea with any webpage -->
+	<meta charset="UTF-8" />
+	<!-- Set viewport so page remains consistently scaled w narrow devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Include CSS file, including a site-wide CSS and for this particular page -->
+	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- Load jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+	<!-- Load p5.js library -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
+
+	<!-- Link to javascript files - DEFER waits until all elements are rendered -->
+    <script type="text/javascript" src="../js/site.js" DEFER></script>
+	<!-- Use me for a JavaScript OOP Project -->
+	<script type="text/javascript" src="./js/project.js" DEFER></script>
+	<!-- Use me for a p5.js project -->
+	<!-- <script type="text/javascript" src="./js/sketch.js" DEFER></script> -->
+
+	<script type="text/javascript" src="./js/xxhash.min.js" DEFER></script>
+	<script type="text/javascript" src="./js/engine.js" DEFER></script>
+	<script type="text/javascript" src="./js/my_world.js" DEFER></script>
+</head>
+<body>
+	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
+	<main id="content">
+		<section>
+
+			<h1>Experiment 4 - ProcGen/Infinite Worlds, First World</h1>
+
+			<div class="minor-section">
+
+
+					  <div id="container"></div>
+					  <div id="waldoCount"></div>
+
+
+				<br>
+				<p>Use browser back button to return to home page</p>
+				<!-- </div> -->
+                <div class="fullscreen-box">
+                    <button id="fullscreen">Fullscreen</button>
+                </div>
+			</div>
+
+			<div class="minor-section">
+				<h2>Description</h2>
+				<p>What are you trying to acomplish with this experiment?
+				<p>For the first experiment, I wanted to create an infitie world that's similar to that from Minecraft. So 
+					your character is the Minecraft Steve and your job is to explore the endless world. There are currently three 
+					types of biomes. hills(Brown), Forest (dark green), and valley (light green). There's also bodies of water
+					and lava. 
+				</p>
+
+				</p>
+			</div>
+
+			<div class="minor-section">
+				<br>
+				<h2>Technical</h2>
+				<p>Describe in detail what you did technically and how it works?
+					<p>To create these bomes, I used perlin noise. So depending on each probability, will 
+						determine which part of the world is painted by a specific biome. I also added some tecture so 
+						it wasn't just plain tiles. 
+					</p>
+
+				</p>
+			</div>
+
+			<div class="minor-section">
+				<br>
+				<h2>Reflection</h2>
+				<p>
+				Im definitely proud of this experiment. I went from just having green and brown tiles, to creating something that
+				was genuinely random. There's also a character, and as you are moving across the world, some of the tiles move as well. 
+				</p>
+			</div>
+
+			<div class="minor-section">
+				<br />
+				<h2>Statement</h2>
+				<p>When I was brainstorming ideas, the first thing that came to mind was Minecraft. Minecraft is notorious for its 
+					infinite world where everything is never the same. With multiple biomes, and endless adventure, I tried to recreate that 
+					with this experiment. I added a character, similar to Steve, the character, and gave him the option to roam the infinite world. As 
+					you are moving, the tiles do move, especially with the forest tiles. Explore the magical world of bootleg Minecraft. 
+				</p>
+
+			  </div>
+
+		</section>
+		<nav id="links" class="minor-section">
+			<!-- Put link back to homepage here. -->
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+		</nav>
+	</main>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This title is used for tabs and bookmarks -->
+	<title>Experiment 4 - ProcGen/Infinite Worlds, Third World</title>
+
+	<!-- Use UTF character set, a good idea with any webpage -->
+	<meta charset="UTF-8" />
+	<!-- Set viewport so page remains consistently scaled w narrow devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Include CSS file, including a site-wide CSS and for this particular page -->
+	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- Load jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+	<!-- Load p5.js library -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
+
+	<!-- Link to javascript files - DEFER waits until all elements are rendered -->
+    <script type="text/javascript" src="../js/site.js" DEFER></script>
+	<!-- Use me for a JavaScript OOP Project -->
+	<script type="text/javascript" src="./js/project.js" DEFER></script>
+	<!-- Use me for a p5.js project -->
+	<!-- <script type="text/javascript" src="./js/sketch.js" DEFER></script> -->
+
+	<script type="text/javascript" src="./js/xxhash.min.js" DEFER></script>
+	<script type="text/javascript" src="./js/engine3.js" DEFER></script>
+	<script type="text/javascript" src="./js/my_world3.js" DEFER></script>
+</head>
+<body>
+	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
+	<main id="content">
+		<section>
+
+			<h1>Experiment 4 - ProcGen/Infinite Worlds, Third World</h1>
+
+			<div class="minor-section">
+
+
+					  <div id="container"></div>
+					  <div id="waldoCount"></div>
+
+
+				<br>
+				<p>Use browser back button to return to home page</p>
+				<!-- </div> -->
+                <div class="fullscreen-box">
+                    <button id="fullscreen">Fullscreen</button>
+                </div>
+			</div>
+
+			<div class="minor-section">
+				<h2>Description</h2>
+				<p>What are you trying to acomplish with this experiment?</p>
+				<p>For this experiment, we were inspired by our love for One Piece and 
+					The Ring of Fire. We're aware that both worlds are not infinite, but 
+					we liked the idea of creating islands that contained lava in them. The 
+					waves have a moving effect, and the lava colors would shift so it makes it 
+					look like its mving as well. 
+				</p>
+			</div>
+
+			<div class="minor-section">
+				<br>
+				<h2>Technical</h2>
+				<p>Describe in detail what you did technically and how it works?<br></p>
+				<p>The p3_worldKeyChanged function employs XXH hashing to derive a deterministic terrain layout from a given key, 
+					initializing noise and random seeds accordingly. p3_tileWidth and p3_tileHeight establish a standard tile size 
+					of 8x8 pixels, shaping the foundational units of the world. In p3_drawTile, tile appearance is dynamically determined 
+					by position and noise value, with distinct thresholds dictating colors and strokes to depict various terrain features. 
+					Additionally, a simulated ocean motion effect within p3_drawTile utilizes trigonometric functions to create the illusion 
+					of undulating waves, enhancing the immersive quality of the environment.
+
+
+				</p>
+			</div>
+
+			<div class="minor-section">
+				<br>
+				<h2>Reflection</h2>
+				<p>
+	
+					The Ring of Fire was a challenge to improve. We needed to understand how to use our Perlin noise code to create infinite islands and a dominant body of water. Also, having a static map felt too dull, so we researched how to create motion on the p5.js website. We stumbled upon the sin() and cos() functions, which create the exact wave effect we were looking for.
+				</p>
+			</div>
+
+			<div class="minor-section">
+				<br />
+				<h2>Statement</h2>
+				<p>We wanted to recreate a map of the Ring of Fire. To get as close as possible, we added green to form islands and used our version of perlin noise to create island-like structures. We made the map predominantly water and then added a different shade of blue to the islands to imitate shallow water. The grey in the middle represents the volcanoes on the islands. We added color shifting tiles to replicate boiling lava. Finally, we used sinusoidal and cosinusoidal motion to create the wave effect.
+
+				</p>
+
+			  </div>
+
+		</section>
+		<nav id="links" class="minor-section">
+			<!-- Put link back to homepage here. -->
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+		</nav>
+	</main>
+</body>
+</html>
