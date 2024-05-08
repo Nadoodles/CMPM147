@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Experiment X - Subject/Topic</title>
+	<title>Experiment 05: Evolutionary Impressions</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
 	<meta charset="UTF-8" />
@@ -10,52 +10,73 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<!-- Include CSS file, including a site-wide CSS and for this particular page -->
-	<link rel="stylesheet" type="text/css" href="../css/site.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<!-- Load jQuery library -->
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
         crossorigin="anonymous"></script>
-	<!-- Load p5.js library -->
+
 	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
 
 	<!-- Link to javascript files - DEFER waits until all elements are rendered -->
     <script type="text/javascript" src="../js/site.js" DEFER></script>
 	<!-- Use me for a JavaScript OOP Project -->
-	<script type="text/javascript" src="./js/project.js" DEFER></script>
-	<!-- Use me for a p5.js project -->
-	<script type="text/javascript" src="./js/sketch.js" DEFER></script>
+    <script src="./js/project.js" defer></script>
+    <script src="./js/sketch.js" defer></script>
 </head>
 <body>
 	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
 	<main id="content">
 		<section>
 
-			<h1>Experiment X - Subject/Topic</h1>
+			<h1>Experiment 05: Evolutionary Impressions</h1>
 
 			<div class="minor-section">
+				<select id="dropper"></select>
+				<button id="restart">
+				restart
+				</button>
 				<div id="canvas-container">
-					<!-- canvas will be added here -->
+					<p>
+						Mutation rate (<span id="rate"></span>%):<br /><input
+						  id="slider"
+						  type="range"
+						  min="1"
+						  max="100"
+						  value="100"
+						/>
+					  </p>
+					  <p id="active"></p>
+					  <p>Active score: <span id="activeScore"></span></p>
+					  <p>Exploration rate: <span id="fpsCounter"></span> fps</p>
+					  <p id="best"></p>
+					  <p>Best score: <span id="bestScore"></span></p>
+					  <p id="memory" data-max-items="16"></p>
 				</div>
-                <div class="fullscreen-box">
-                    <button id="fullscreen">Fullscreen</button>
-                </div>
+                
 			</div>
+			
 
 			<div class="minor-section">
 				<h2>Description</h2>
 				<p>What are you trying to acomplish with this experiment?</p>
+				<p>This experiment allows the user to select one of three images and mutate them into new pictures. The mutation rate can be lowered to slow down the changes in the image.
+				</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Technical</h2>
 				<p>Describe in detail what you did technically and how it works?</p>
+				<p>initDesign resizes the canvas to a quarter of the inspiration image's dimensions, creating circles at regular intervals, sampling colors, and storing circle data. renderDesign then visualizes this on the canvas by drawing the image and filling circles with their respective colors. mutateDesign introduces variation by randomly adjusting circle positions and sizes within specified constraints, altering the overall appearance of the design.
+				</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Reflection</h2>
 				<p>Each person that worked on the code should reflect on the process, the difficulties, and the successes of the experiment.</p>
+				<p>Our difficulties stemmed from struggling to understand the project at first. The guidelines for this experiment were loose, so it was hard for us to conceive an idea that would get us a passing grade. Once we decided on a direction, our result was much more manageable. The example project overlaid a series of translucent rectangles over the original image. Our take was to keep the original image and then use its pixels to give each of our ellipses a color similar to the original. It was hard to tell the difference between each image if they were all grayscale, so keeping the original color palette was our goal.
+				</p>
 			</div>
 
 		</section>
